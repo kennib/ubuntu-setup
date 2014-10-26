@@ -1,7 +1,8 @@
-all: essentials programming
+all: essentials programming shell
 
 essentials: vim git
 programming: build-essentials haskell node
+shell: zsh
 
 
 #
@@ -39,3 +40,11 @@ node: build-essentials
 npm:
 	export NODE_PATH="/usr/bin/node"
 	wget https://www.npmjs.org/install.sh -O /tmp/npm-setup | bash /tmp/npm-setup
+
+
+#
+# Shell
+#
+zsh:
+	apt-get install zsh
+	wget http://install.ohmyz.sh -O /tmp/zsh-setup | bash /tmp/zsh-setup
