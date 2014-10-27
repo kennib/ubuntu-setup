@@ -1,8 +1,9 @@
-all: essentials programming shell
+all: essentials programming shell window-manager
 
 essentials: vim git
 programming: build-essentials haskell node
 shell: zsh
+winodw-manager: xmonad
 
 
 #
@@ -48,3 +49,10 @@ npm:
 zsh:
 	apt-get install zsh
 	wget http://install.ohmyz.sh -O /tmp/zsh-setup | bash /tmp/zsh-setup
+
+
+#
+# Window Manager
+#
+xmonad:
+	apt-get install xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev suckless-tools
