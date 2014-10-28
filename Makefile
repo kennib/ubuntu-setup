@@ -12,10 +12,13 @@ winodw-manager: xmonad
 vim:
 	apt-get install vim
 	TEXT_EDITOR=vim
+	cp config/.vimrc ~
 
 git: vim
 	apt-get install git
 	git config --global core.editor vim
+	cp config/.gitignore ~
+	git config --global core.excludesfile ~/.gitignore
 
 
 #
